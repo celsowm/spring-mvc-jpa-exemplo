@@ -77,6 +77,7 @@ public class PessoaController {
         if (result.hasErrors()) {
             return "error";
         }
+        pessoa.setHabilitacao(pessoa.getHabilitacao());
         this.repository.save(pessoa);
         List<Pessoa> pessoas = this.repository.findAll();
         model.addAttribute("pessoas", pessoas);

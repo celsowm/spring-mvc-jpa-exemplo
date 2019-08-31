@@ -9,7 +9,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Habilitacao {
@@ -21,6 +23,7 @@ public class Habilitacao {
     private String categoria;
     
     @OneToOne
+    @JoinColumn(updatable = false, insertable = true, nullable = false)
     private Pessoa pessoa;
 
     public Habilitacao() {

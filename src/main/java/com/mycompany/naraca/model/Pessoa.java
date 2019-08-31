@@ -73,6 +73,7 @@ public class Pessoa {
 
     public void setHabilitacao(Habilitacao habilitacao) {
         this.habilitacao = habilitacao;
+        habilitacao.setPessoa(this);
     }
     
     
