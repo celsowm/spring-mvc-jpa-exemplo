@@ -5,6 +5,7 @@
  */
 package com.mycompany.naraca.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -22,8 +23,10 @@ public class Pessoa {
     private int id;
     private String nome;
     private int idade;
+    @JsonIgnore
     @OneToMany(mappedBy = "proprietario")
     private Set<Veiculo> veiculos;
+    @JsonIgnore
     @OneToOne(mappedBy = "pessoa", cascade = {CascadeType.ALL}, orphanRemoval = true)
     private Habilitacao habilitacao;
 
@@ -35,6 +38,7 @@ public class Pessoa {
         this.id = id;
     }
     
+    //remover duplo construtor
     public Pessoa(){};
 
     public String getNome() {
@@ -53,11 +57,7 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public Pessoa(String nome, int idade, Set<Veiculo> veiculos) {
-        this.nome = nome;
-        this.idade = idade;
-        this.veiculos = veiculos;
-    }
+
 
     public Set<Veiculo> getVeiculos() {
         return veiculos;

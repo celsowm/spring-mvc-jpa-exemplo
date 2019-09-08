@@ -5,6 +5,8 @@
  */
 package com.mycompany.naraca.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,6 +25,7 @@ public class Veiculo {
     private int ano;
     @ManyToOne
     private Pessoa proprietario;
+    @JsonIgnore
     @ManyToMany(mappedBy = "veiculos")
     private List<AcessorioVeicular> acessoriosVeiculares;
 
