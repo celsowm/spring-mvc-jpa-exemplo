@@ -6,7 +6,7 @@
     <br />
     <br />
     <table border>
-        <tr><th>Nome</th><th>Idade</th><th>Habilitação</th><th>Ações</th></tr>
+        <tr><th>Nome</th><th>Idade</th><th>Habilitação</th><th>Veículos</th><th>Ações</th></tr>
             <c:forEach items="${pessoas}" var="pessoa">
         <tr>
             <td>${pessoa.getNome()}</td>
@@ -15,6 +15,9 @@
                 ${(pessoa.getHabilitacao() != null) 
                   ? pessoa.getHabilitacao().getNumero() 
                   : "-"}
+            </td>
+            <td>
+                <a href="/veiculo/inserir/${pessoa.getId()}">Veículos</a>
             </td>
             <td> 
                 <a href="/pessoa/alterar/${pessoa.getId()}">Alterar</a>

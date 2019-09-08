@@ -1,9 +1,9 @@
 <nav>
-    <a href="/pessoas/index">Pessoas</a>
+    <a href="/pessoa">Pessoas</a>
     &nbsp;
-    <a href="/livro/index">Livros</a>
+    <a href="/livro">Livros</a>
     &nbsp;
-    <a href="/editora/index">Editoras</a>
+    <a href="/editora">Editoras</a>
     &nbsp;
 </nav>
 <hr />

@@ -59,6 +59,22 @@ public class Veiculo {
     public void setAno(int ano) {
         this.ano = ano;
     }
+
+    public Pessoa getProprietario() {
+        return proprietario;
+    }
+
+    public void setProprietario(Pessoa proprietario) {
+        this.proprietario = proprietario;
+    }
+
+    public List<AcessorioVeicular> getAcessoriosVeiculares() {
+        return acessoriosVeiculares;
+    }
+
+    public void setAcessoriosVeiculares(List<AcessorioVeicular> acessoriosVeiculares) {
+        this.acessoriosVeiculares = acessoriosVeiculares;
+    }
     
     
 }

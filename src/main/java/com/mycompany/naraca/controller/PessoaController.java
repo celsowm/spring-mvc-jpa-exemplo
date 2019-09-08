@@ -47,7 +47,7 @@ public class PessoaController {
         return "/pessoa/inserir";
     }
     
-    @RequestMapping("/pessoa/remover")
+    @RequestMapping("/pessoa/remover/{@id}")
     public String remover(Model model, @RequestParam("id") int id) {
         this.repository.deleteById(id);
         model.addAttribute("mensagem", "Dado removido com sucesso !");

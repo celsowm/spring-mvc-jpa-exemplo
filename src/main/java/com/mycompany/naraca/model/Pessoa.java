@@ -24,7 +24,7 @@ public class Pessoa {
     private int idade;
     @OneToMany(mappedBy = "proprietario")
     private Set<Veiculo> veiculos;
-    @OneToOne(mappedBy = "pessoa", cascade = {CascadeType.ALL})
+    @OneToOne(mappedBy = "pessoa", cascade = {CascadeType.ALL}, orphanRemoval = true)
     private Habilitacao habilitacao;
 
     public int getId() {
